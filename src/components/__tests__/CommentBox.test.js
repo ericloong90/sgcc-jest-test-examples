@@ -14,7 +14,7 @@ describe('testing if CommentBox is rendering child components correctly', () => 
   // There are two ways of checking for presence of UI elements in a Redux connected component
   // First one, we can render the CommentBox using mount and connect it to the store directly using Root. 
   // Note that we need to use mount to render our component because Root is now wrapping our CommentBox, textarea is no longer direct child of the component that we are testing
-  it('should render a textarea and a button', () => {
+  it('should render a textarea and 2 buttons', () => {
     component = mount(
       <Root>
         <CommentBoxWithRedux />
@@ -22,7 +22,7 @@ describe('testing if CommentBox is rendering child components correctly', () => 
     )
   
     expect(component.find('textarea').length).toEqual(1)
-    expect(component.find('button').length).toEqual(1)
+    expect(component.find('button').length).toEqual(2)
   })
   
   // Second method is shown below. We first amend our CommentBox code to also export the original non-Redux CommentBox component for testing.
@@ -31,7 +31,7 @@ describe('testing if CommentBox is rendering child components correctly', () => 
     component = shallow(<CommentBox />)
   
     expect(component.find('textarea').length).toEqual(1)
-    expect(component.find('button').length).toEqual(1)
+    expect(component.find('button').length).toEqual(2)
   })
 })
 
@@ -70,7 +70,7 @@ describe('testing if CommentBox is working properly', () => {
 
   it('should empty the textarea when the input is submitted', () => {
     // Here we are also simulating an event, except that we are simulating the click event and we do not need to pass in any new event object to be merged, according to our app logic.
-    component.find('button').simulate('click')
+    component.find('button.submitCommentButton').simulate('click')
     component.update()
 
     expect(component.find('textarea').prop('value')).toEqual('')
