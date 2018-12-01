@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import saveComment from 'actions/saveComment'
 
-class CommentBox extends Component {
+export class CommentBox extends Component {
   state = {
     comment: '',
   }
@@ -12,6 +12,10 @@ class CommentBox extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault()
     this.props.saveComment(this.state.comment)
+
+    this.setState({
+      comment: ''
+    })
   }
 
   handleTextareaChange = (event) => {

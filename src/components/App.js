@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentA from 'components/ComponentA';
 import CommentBox from 'components/CommentBox'
+import CommentList from 'components/CommentList'
 
 export default class App extends Component {
   state = {
@@ -16,6 +17,7 @@ export default class App extends Component {
         <ComponentA />
         <ComponentA />
         <CommentBox />
+        <CommentList />
       </div>
     )
   }

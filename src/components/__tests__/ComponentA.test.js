@@ -7,7 +7,7 @@ let component
 
 // Executes before every single test suites defined in the context
 beforeEach(() => {
-  // This to render and mount our ComponentA onto a virtual DOM for testing
+  // shallow is used to render and mount our ComponentA onto a virtual DOM for testing. Note that shallow only renders the component that we are testing and not its children.
   component = shallow(<ComponentA sample='Hello World' />)
 })
 
