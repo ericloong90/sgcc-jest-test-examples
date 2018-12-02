@@ -1,5 +1,5 @@
 Reducers:
-  ☐ Continue adding reducer feature
-  ☐ Abstract store creation onto a separate module - using 
-  ☐ Connect App to Redux store
-  ☐ Adjust tests to adapt to the Redux store - connect components to the Redux store separately from the now separated store module
+  ✔ Continue adding reducer feature @done(18-12-02 12:53)
+  ✔ Abstract store creation onto a separate module - using @done(18-12-02 12:53)
+  ✔ Connect App to Redux store @done(18-12-02 12:53)
+  ✔ Adjust tests to adapt to the Redux store - connect components to the Redux store separately from the now separated store module @done(18-12-02 12:53)
